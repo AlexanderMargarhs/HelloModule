@@ -4,4 +4,4 @@ GetReply = function(request, response) // Add the response function.
     response.send(Hello.answer);
 }
 
-module.exports.GetReply = GetReply; // Export Function.
+module.exports = GetReply; // Export Function.
