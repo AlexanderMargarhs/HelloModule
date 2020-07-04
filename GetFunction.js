@@ -1,7 +1,7 @@
 GetReply = function(request, response) // Add the response function.
 {
-    let Hello = {answer : "Hello World!"};
-    response.json(Hello);
+    let name = request.params;
+    response.json(name);
 }
 
 module.exports = GetReply; // Export Function.
