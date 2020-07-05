@@ -1,0 +1,1 @@
+var PersonList = module.exports = [];
