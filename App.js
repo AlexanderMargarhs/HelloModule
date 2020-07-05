@@ -6,14 +6,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const Reply = require('./GetFunction.js'); // Add GetFunction module.
-const Post = require('./PostFunction.js'); // Add PostFunction module.
+const Reply = require('./Functions/GetFunction.js'); // Add GetFunction module.
+const Post = require('./Functions/PostFunction.js'); // Add PostFunction module.
 
-const Person = require('./PersonRoute.js'); // Add Person module.
-const ID = require('./IDRoute.js'); // Add ID module.
-const Gender = require('./GenderRoute.js'); // Add Gender module.
-const Cats = require('./CatsRoute.js'); // Add Cats module.
-const Persons = require('./PersonsRoute.js'); // Add Persons module.
+const Person = require('./Routes/PersonRoute.js'); // Add Person module.
+const ID = require('./Routes/IDRoute.js'); // Add ID module.
+const Gender = require('./Routes/GenderRoute.js'); // Add Gender module.
+const Cats = require('./Routes/CatsRoute.js'); // Add Cats module.
+const Persons = require('./Routes/PersonsRoute.js'); // Add Persons module.
 
 const port = 8080; // Port number.
 

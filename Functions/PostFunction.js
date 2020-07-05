@@ -3,8 +3,8 @@ PostReply = function(request, response) // Add the response function.
     let par = request.params;
     if (request.originalUrl == '/Persons')
     {
-        const Person = require('./Person.js'); // Import the class.
-        var PersonList = require('./data.js'); // Import the List.
+        const Person = require('../Person.js'); // Import the class.
+        var PersonList = require('../data.js'); // Import the List.
         
         var name = request.body.name; // Body for POST, to get name.
         var age = request.body.age; // Body for POST, to get age.
@@ -12,15 +12,13 @@ PostReply = function(request, response) // Add the response function.
         
         var person = new Person(name, age, gender); // Create a new object.
         
-        console.log(request.body);
-        
         PersonList.push({'name' : person.getName(), 'age' : person.getAge(), 'gender' : person.getGender()}); // Add to array.
         
         response.json(PersonList); // Return the list.
     }
     else if (par.Person != undefined) // If the URL is /Persons/<name>.
     {    
-        var PersonList = require('./data.js'); // Import the List.
+        var PersonList = require('../data.js'); // Import the List.
         
         let index = PersonList.findIndex(x => x.name === par.Person); // Find the index of the array.
 
