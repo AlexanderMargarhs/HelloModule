@@ -20,7 +20,9 @@ PatchReply = function(request, response)
             
             var person = new Person(name, age, gender);
             
-            PersonList[index] = ({'name' : person.getName(), 'age' : person.getAge(), 'gender' : person.getGender()});
+            PersonList[index].name = name;
+            PersonList[index].age = age;
+            PersonList[index].gender = gender;
             
             response.json(PersonList[index]);
         }
