@@ -1,18 +1,16 @@
 class Person 
 {
-    // Private attributes.
     #name; 
     #age;
     #gender;
     
-    constructor(name, age, gender) // Constructor.
+    constructor(name, age, gender)
     {
         this.#name = name;
         this.#age = age;
         this.#gender = gender;
     }
 
-    // Getters.
     getName() 
     {
         return this.#name;
@@ -28,7 +26,6 @@ class Person
         return this.#gender;
     }
 
-    // Setters.
     setName(name)
     {
         this.#name = name;
